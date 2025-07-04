@@ -7,7 +7,7 @@ pipeline {
   }
 
   environment {
-    DOCKER_CRED = 'dockerhub'                    // 🔐 Identifiant Jenkins DockerHub
+    DOCKER_CRED = 'dockerhub'                    // 🔐 Identifiant Jenkins DockerHubb
     SONAR_TOKEN = credentials('sonar-token')     // 🔐 Token SonarQube (Secret text)
     SONAR_URL   = 'http://13.39.80.147:9000'     // 🌍 Ton URL publique SonarQube
     NEXUS_URL   = 'http://13.39.80.147:8081/repository/maven-snapshots/'  // 🌍 URL Nexus
