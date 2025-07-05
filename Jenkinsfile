@@ -87,7 +87,7 @@ pipeline {
       usernameVariable: 'NEXUS_USER',
       passwordVariable: 'NEXUS_PASS'
     )]) {
-      // Crée un settings.xml temporaire avec les credentials
+      // Crée un settings.xml temporaire avec les credentialss
       sh '''cat > settings.xml <<EOF
 <settings>
   <servers>
