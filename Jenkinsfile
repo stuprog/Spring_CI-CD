@@ -10,7 +10,7 @@ pipeline {
     DOCKER_CRED = 'dockerhub'
     SONAR_TOKEN = credentials('sonar-token')
     SONAR_URL   = 'http://13.39.80.147:9000'
-    NEXUS_URL   = 'http://13.39.80.147:8081/#browse/browse:maven-snapshots'
+    NEXUS_URL   = 'http://13.39.80.147:8081/repository/maven-snapshots/'
   }
 
   stages {
