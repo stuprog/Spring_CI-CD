@@ -87,7 +87,7 @@ pipeline {
       usernameVariable: 'NEXUS_USER',
       passwordVariable: 'NEXUS_PASS'
     )]) {
-      // Crée un settings.xml temporaire avec les credentialss
+      // Crée un settings.xml temporaire avec les credential
       sh '''cat > settings.xml <<EOF
 <settings>
   <servers>
@@ -100,7 +100,7 @@ pipeline {
 </settings>
 EOF'''
       
-      // Utilise le nouveau settings.xml et corrige la syntaxe du repositorys
+      // Utilise le nouveau settings.xml et corrige la syntaxe du repository
       sh 'mvn deploy -B -s settings.xml -DaltDeploymentRepository=nexus::http://13.39.80.147:8081/repository/maven-snapshots/'
     }
   }
