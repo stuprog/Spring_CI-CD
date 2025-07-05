@@ -100,7 +100,7 @@ pipeline {
 </settings>
 EOF'''
       
-      // le nouveau settings.xml 
+      // le nouveau settings.xml fichier
       sh 'mvn deploy -B -s settings.xml -DaltDeploymentRepository=nexus::http://13.39.80.147:8081/repository/maven-snapshots/'
     }
   }
