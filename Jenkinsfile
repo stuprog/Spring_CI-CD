@@ -9,7 +9,7 @@ pipeline {
   environment {
     DOCKER_CRED = 'dockerhub'
     SONAR_TOKEN = credentials('sonar-token')
-    SONAR_URL   = 'http://13.39.80.147:9000/'
+    SONAR_URL   = 'http://13.39.80.147:9000'
     NEXUS_URL   = 'http://13.39.80.147:8081/#browse/browse:maven-snapshots'
   }
 
@@ -101,14 +101,14 @@ pipeline {
 EOF'''
       
       // Utilise le nouveau settings.xml et corrige la syntaxe du repository
-      sh 'mvn deploy -B -s settings.xml -DaltDeploymentRepository=nexus::http://13.39.80.147:8081/#browse/browse:maven-snapshots'
+      sh 'mvn deploy -B -s settings.xml -DaltDeploymentRepository=nexus::http://13.39.80.147:8081/repository/maven-snapshots/'
     }
   }
 }
   }
 
   post {
-    success  { echo '✅ Pipeline terminé avec succèss' }
+    success  { echo '✅ Pipeline terminé avec succès' }
     unstable { echo '⚠️ Pipeline instable (vérifier les logs)' }
     failure  { echo '❌ Pipeline échoué' }
   }
