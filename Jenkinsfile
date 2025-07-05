@@ -108,7 +108,7 @@ EOF'''
   }
 
   post {
-    success  { echo '✅ Pipeline terminé avec succès' }
+    success  { echo '✅ Pipeline terminé avec succèss' }
     unstable { echo '⚠️ Pipeline instable (vérifier les logs)' }
     failure  { echo '❌ Pipeline échoué' }
   }
