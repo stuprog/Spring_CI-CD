@@ -101,8 +101,11 @@ pipeline {
 EOF'''
       
       // Utilise le nouveau settings.xml et corrige la syntaxe du repository
-      sh 'mvn deploy -B -s settings.xml -DaltDeploymentRepository=nexus::default::http://13.39.80.147:8081/repository/maven-snapshots/
-'
+      sh '''
+  mvn deploy -B -s settings.xml \
+    -DaltDeploymentRepository=nexus::default::http://13.39.80.147:8081/repository/maven-snapshots/
+'''
+
     }
   }
 }
